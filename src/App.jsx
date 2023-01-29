@@ -29,7 +29,7 @@ function App() {
       <div className="App">
         <img src={pageImg} className={pageImg ? `wiki-img` : `hidden`} />
         <div className="wiki-text">
-          <h1>{pageTitle}</h1>
+          <h1><a href={pageUrl} target="_blank">{pageTitle}</a></h1>
           <p>{pageExtract}</p>
         </div>
       </div>
