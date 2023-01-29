@@ -1,34 +1,35 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
+// wiki media api: list=random&rnlimit=1
 
-  return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
-  )
+function App() {
+  
+  const [data, setData] = useState(null)
+  useEffect(() => {
+    fetch(`https://en.wikipedia.org/w/api.php?action=query&format=json&origin=*&list=random&formatversion=2&rnnamespace=0`
+    )
+      .then(response => response.json())
+      .then(data => setData(data))
+  }, [])
+
+  console.log(data)
+
+  if (data) 
+    return (
+      <pre>{JSON.stringify(data, null, 2)}</pre>
+    )
+
+  // const WIKI_TITLE = "Hackathon"
+  // const WIKI_DESCRIPTION = `A hackathon (also known as a hack day, hackfest, datathon or codefest; a portmanteau of hacking and marathon) is an event where people engage in rapid and collaborative engineering over a relatively short period of time such as 24 or 48 hours.`
+
+  // return (
+  //   <div className="App">
+  //     <h1>{WIKI_TITLE}</h1>
+  //     <p>{WIKI_DESCRIPTION}</p>
+  //   </div>
+  // )
 }
 
 export default App
