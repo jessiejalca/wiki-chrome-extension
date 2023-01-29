@@ -7,7 +7,7 @@ function App() {
   const [data, setData] = useState(null)
 
   useEffect(() => {
-    fetch(`https://en.wikipedia.org/w/api.php?action=query&format=json&origin=*&prop=extracts&generator=random&formatversion=2&exchars=200&exintro=1&explaintext=1&grnnamespace=0&grnlimit=1`)
+    fetch(`https://en.wikipedia.org/w/api.php?action=query&format=json&origin=*&prop=info|extracts%7Cpageimages&inprop=url&generator=random&formatversion=2&exchars=170&exintro=1&explaintext=1&piprop=original&grnnamespace=0&grnlimit=1`)
       .then(response => response.json())
       .then(data => setData(data))
   }, [])
@@ -17,10 +17,17 @@ function App() {
     const pageData = pages[Object.keys(pages)[0]]
     const pageTitle = pageData.title
     const pageExtract = pageData.extract
+    const pageUrl = pageData.fullurl
+    let pageImg = ""
+    if (pageData.original) {
+      pageImg = pageData.original.source
+      console.log(pageImg)
+    }
     console.log(pageData)
     
     return (
       <div className="App">
+        <img src={pageImg} />
         <h1>{pageTitle}</h1>
         <p>{pageExtract}</p>
       </div>
