@@ -27,9 +27,11 @@ function App() {
     
     return (
       <div className="App">
-        <img src={pageImg} />
-        <h1>{pageTitle}</h1>
-        <p>{pageExtract}</p>
+        <img src={pageImg} className={pageImg ? `wiki-img` : `hidden`} />
+        <div className="wiki-text">
+          <h1>{pageTitle}</h1>
+          <p>{pageExtract}</p>
+        </div>
       </div>
     )
   }

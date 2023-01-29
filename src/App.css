@@ -1,7 +1,37 @@
-html, body {
+/* html, body {
   max-width: 30rem;
-}
+} */
 
 body {
   font-family: Inter, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.App {
+  max-width: 25rem;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+.wiki-img { 
+  max-height: 15rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.wiki-text {
+  padding: 20px;
+}
+
+.wiki-text > h1 {
+  margin-bottom: 0.5em;
+  line-height: 100%;
+}
+
+.hidden {
+  display: none;
 }
