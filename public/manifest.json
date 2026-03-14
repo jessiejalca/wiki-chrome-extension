@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Wiki Chrome Extension",
+  "version": "1.0.0",
+  "description": "Daily Dose of Wiki",
+  "action": {
+    "default_popup": "/index.html",
+    "default_title": "Wiki"
+  },
+  "icons": {
+    // "16": "icon-16.png",
+    // "48": "icon-48.png",
+    "128": "icon-128.png"
+  },
+  "permissions": ["storage"],
+  "host_permissions": ["https://*.wikipedia.org/*"]
+}
