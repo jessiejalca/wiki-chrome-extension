@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Wiki Chrome Extension",
+  "name": "WikiRoulette",
   "version": "1.0.0",
   "description": "WikiRoulette",
   "action": {
