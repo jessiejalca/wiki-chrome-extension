@@ -10,7 +10,7 @@ Built with React JS and CSS.
 
 ## Privacy Policy
 
-Daily Dose of Wiki does not collect or store any personal user data.
+WikiRoulette does not collect or store any personal user data.
 It only retrieves public Wikipedia API results from `https://en.wikipedia.org/w/api.php`.
 No analytics, no user tracking.
 Permissions:
