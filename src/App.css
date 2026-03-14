@@ -1,6 +1,10 @@
-/* html, body {
-  max-width: 30rem;
-} */
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  min-width: max-content;
+  min-height: max-content;
+  overflow: hidden;
+}
 
 body {
   font-family: Inter, sans-serif;
@@ -8,14 +12,11 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 20px;
 }
 
 .App {
   max-width: 25rem;
-  border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
 }
 
 .wiki-img { 
