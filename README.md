@@ -6,13 +6,13 @@ Created for UF's Swamphacks 2023, this extension taps into Wikipedia's API to su
 
 Built with React JS and CSS.
 
-Stay tuned for the free live extension, currently pending review on the Chrome Web Store.
+Now available on the Chrome Web Store!
 
-[Live Prototype](https://zesty-buttercream-4c83d0.netlify.app)
+[Install on Chrome](https://chromewebstore.google.com/detail/nifbbdjfbfgbhenlmeibpbpcgocaeaei) | [Live Prototype](https://zesty-buttercream-4c83d0.netlify.app)
 
 ## Run Extension Locally
 
-Why run it locally? You can use the extension now, while it's still in review, and/or you can try contributing!
+Why run it locally? You can contribute or test changes before they ship!
 
 Here's how:
 
